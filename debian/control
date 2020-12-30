@@ -1,0 +1,15 @@
+Source: bingwallpaper
+Section: unknown
+Priority: optional
+Maintainer: LiuYun <liuyun01@kylinos.cn>
+Build-Depends: debhelper (>= 9), cmake
+Standards-Version: 3.9.6
+Homepage: <insert the upstream URL, if relevant>
+#Vcs-Git: git://anonscm.debian.org/collab-maint/bingwallpaper.git
+#Vcs-Browser: https://anonscm.debian.org/gitweb/?p=collab-maint/bingwallpaper.git;a=summary
+
+Package: bingwallpaper
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=BingWallPaper
+Exec=/usr/bin/bingwallpaper
+Terminal=false
+Type=Application
+Categories=Development;
+StartupNotify=true
+NoDisplay=true

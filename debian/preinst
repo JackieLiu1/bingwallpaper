@@ -1,0 +1,5 @@
+#!/bin/sh
+
+mkdir -p /usr/share/BingWallPaper/favorites
+mkdir -p /usr/share/BingWallPaper/net-images
+chmod -R 777 /usr/share/BingWallPaper/
