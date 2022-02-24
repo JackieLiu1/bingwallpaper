@@ -19,7 +19,7 @@
 #include <utils.hpp>
 #include <json.hpp>
 
-#define BING_JSON_URL   "http://www.bing.com/HPImageArchive.aspx?format=js&idx=16&n=16"
+#define BING_JSON_URL   "https://www.bing.com/HPImageArchive.aspx?format=js&idx=16&n=16"
 #define TMP_JSON_PATH   "/tmp/.bingwallpaper-json"
 
 namespace BING
@@ -39,8 +39,10 @@ namespace BING
 
 		for (uint32_t i = 0; i < BingJsonValue.size(); i ++) {
 			std::string url = BingJsonValue[i]["url"];
-			url = std::string("bing.com") + url;
-			DownloadFile(url, getenv("HOME") + std::string(BINGWALLPAPER_DATA_DIR) + "/BingImage" + Int2String(i));
+			url = std::string("https://cn.bing.com") + url;
+			std::cout << url << "\n";
+			if (!DownloadFile(url, getenv("HOME") + std::string(BINGWALLPAPER_DATA_DIR) + "/BingImage" + Int2String(i)))
+				printf("Download image failed.\n");
 		}
 
 		return true;
